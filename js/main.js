@@ -1,4 +1,5 @@
-        // Mobile Navigation Toggle
+
+// Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
         
@@ -28,6 +29,37 @@
                 }
             });
         });
+
+
+document.body.classList.add("skeleton-active");
+
+// Buat skeleton otomatis untuk gambar & teks utama
+const skeletonize = () => {
+  document.querySelectorAll("img, h1, h2, h3, p, .product-card, .about-image, .testimonial-card, .contact-form")
+    .forEach(el => {
+      const skeleton = document.createElement("div");
+      skeleton.className = "skeleton-box";
+      skeleton.style.width = `${el.offsetWidth || 100}px`;
+      skeleton.style.height = `${el.offsetHeight || 20}px`;
+      el.style.visibility = "hidden";
+      el.parentNode.insertBefore(skeleton, el);
+    });
+};
+
+// Hapus skeleton setelah semua asset selesai load
+window.addEventListener("load", () => {
+  document.body.classList.remove("skeleton-active");
+  document.querySelectorAll(".skeleton-box").forEach(s => {
+    s.classList.add("skeleton-fade-out");
+    setTimeout(() => s.remove(), 400);
+  });
+  document.querySelectorAll("img, h1, h2, h3, p, .product-card, .about-image, .testimonial-card, .contact-form")
+    .forEach(el => el.style.visibility = "visible");
+});
+
+window.addEventListener("DOMContentLoaded", skeletonize);
+
+
         
         // Product filtering functionality
         const filterButtons = document.querySelectorAll('.filter-btn');
