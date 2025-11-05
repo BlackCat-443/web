@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasa Pulau Indah</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1>Rasa<span>Pulau</span>Indah</h1>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#process" class="nav-link">Process</a></li>
+            <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        
+<!-- NAV ACTIONS -->
+<div class="nav-actions">
+  <a href="#" class="nav-icon search-toggle"><i class="fas fa-search"></i></a> 
+  <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</div>
+
+<!-- Search bar -->
+<div class="search-bar" style="display:none;">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search beers...">
+    <button id="searchClose" class="search-close" aria-label="Close search">&times;</button>
+  </div>
+  <div id="searchResults" class="search-results"></div>
+</div>
+
+
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Premium Craft Beers Brewed with Passion</h2>
+            <p>Discover our exceptional range of handcrafted beers, meticulously brewed using traditional methods and the finest ingredients</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn">Explore Beers</a>
+                <a href="#about" class="btn btn-outline">Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured" class="section featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Beers</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-badge">BEST SELLER</div>
+                    <div class="product-image">
+                        <!-- <img src="https://placehold.co/400x300" alt="India Pale Ale with rich amber color and foamy head in a chilled glass"> -->
+                        <img src="images/products/IPA.PNG" alt="India Pale Ale with rich amber color and foamy head in a chilled glass">
+
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">IPA</h3>
+                        <span class="product-type">India Pale Ale</span>
+                        <p class="product-desc">Bold and hoppy with citrus undertones and a balanced bitterness. Our flagship IPA features aromatic hops and a crisp finish.</p>
+                        <div class="product-meta">
+                            <div class="product-price">$4.63</div>
+                            <div class="product-actions">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               <article class="product-card" data-tag="lager" role="article">
+      <div class="product-badge">NEW</div>
+      <div class="product-image">
+        <img src="images/products/Light_Lager.PNG" alt="Light Lager">
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">LIGHT LAGER | 3.5%ABV</h3>
+        <span class="product-type">Premium Lager</span>
+        <p class="product-desc">Crisp, clean and refreshingly light with a subtle malt character.</p>
+                            <div class="product-price">$2.13</div>
+
+      </div>
+    </article>
+
+    <article class="product-card" data-tag="summer-pale-ale" role="article">
+      <div class="product-badge">NEW</div>
+      <div class="product-image">
+        <img src="images/products/SummerPaleAle.PNG" alt="Summer Pale Ale">
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">Summer Pale Ale</h3>
+        <span class="product-type">Premium Pale Ale</span>
+        <p class="product-desc">Crisp and refined, with subtle malt notes and a smooth, elegant finish.</p>
+                            <div class="product-price">$2.88</div>
+
+      </div>
+    </article>
+
+    <article class="product-card" data-tag="edw-manggo" role="article">
+      <div class="product-badge">BEST SELLER</div>
+      <div class="product-image">
+        <img src="images/products/ManggoLime.PNG" alt="Everyday Weekend Mango & Lime">
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">Everyday Weekend Mango & Lime</h3>
+        <span class="product-type">Fruit Beer</span>
+        <p class="product-desc">Tropical mango and lime sweetness balanced with zesty freshness.</p>
+                            <div class="product-price">$4.38</div>
+
+      </div>
+    </article>
+  </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                        <img src="images/barrel.png" alt="India Pale Ale with rich amber color and foamy head in a chilled glass">
+                    <!-- <img src="https://placehold.co/600x500" alt="Craft beer brewery interior with stainless steel fermentation tanks and traditional brewing equipment"> -->
+                </div>
+                <div class="about-content">
+                    <h2>Our Rasa Pulau Indah</h2>
+                    <p>Didirikan pada tahun 2024, PT Rasa Pulau Indah lahir dari sebuah visi sederhana: menghadirkan pengalaman craft beer terbaik dari sumbernya langsung kepada para penikmat di seluruh Indonesia. Kami percaya bahwa kesegaran dan keaslian adalah kunci dari setiap tegukan yang sempurna.</p>
+                    <p>Sebagai distributor resmi dan eksklusif, kami menjalin kemitraan langsung dengan Black Sand Brewery dan Island Brewing. Setiap produk kami impor langsung dari pabrik mereka, tanpa perantara. Hal ini memastikan bahwa setiap botol yang sampai ke tangan Anda memiliki kesegaran dan kualitas yang sama seperti saat Anda menikmatinya langsung di tempat pembuatan birnya. Komitmen kami adalah menyajikan cita rasa autentik pulau dalam setiap sajian.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">1</div>
+                            <div class="stat-label">Years of Excellence</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Beer Varieties</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brewing Process -->
+    <section id="process" class="section process">
+        <div class="container">
+            <h2 class="section-title">Our Brewing Process</h2>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-mortar-pestle"></i>
+                    </div>
+                    <h3 class="process-title">Milling</h3>
+                    <p>We begin with premium malted barley, gently milled to open the husk while keeping the core intact, unlocking flavor and ensuring high extract yield.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="process-title">Mashing</h3>
+                    <p>The milled malt is mixed with hot water, where natural enzymes convert starches into sugars. Careful temperature control shapes the beer’s body, texture, and flavor.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3 class="process-title">Lautering</h3>
+                    <p>The sweet wort is separated from the grain, yielding a clear liquid that retains the full character of the malt.</p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="process-title">Boiling</h3>
+                    <p>The wort is boiled and hops are added in stages, building bitterness, flavor, and aroma, while also sterilizing and preparing it for fermentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- All Products -->
+  <section id="products" class="section products">
+    <div class="container">
+      <h2 class="section-title">Our Beer Selection</h2>
+
+      <!-- FILTER BUTTONS -->
+<div class="product-filters" role="toolbar" aria-label="Filter products">
+    <button class="filter-btn active" data-target="all" type="button">All Beers</button>
+    <button class="filter-btn" data-target="ipa" type="button">IPA</button>
+    <button class="filter-btn" data-target="lager" type="button">Lager</button>
+    <button class="filter-btn" data-target="edw-manggo" type="button">EDW Manggo</button>
+    <button class="filter-btn" data-target="edw-lime" type="button">EDW Lime</button>
+    <button class="filter-btn" data-target="summer-pale-ale" type="button">Summer Pale Ale</button>
+    <button class="filter-btn" data-target="small-hazy" type="button">Small Hazy</button>
+    <button class="filter-btn" data-target="kolsch" type="button">Kolsch</button>
+    <button class="filter-btn" data-target="plisner" type="button">Plisner</button>
+  </div>
+
+  <div class="product-grid">
+    <article class="product-card" data-tag="ipa">
+                    <div class="product-badge-ABV" data-abv="6.3">6.3%ABV</div>
+      <div class="product-image"><img src="images/products/IPA.PNG" alt="India Pale Ale"></div>
+      <div class="product-info"><h3 class="product-title">IPA</h3><p class="product-desc">A balanced IPA with medium alcohol and smooth bitterness. Great for both new and seasoned drinkers.</p>
+                            <div class="product-price">$4.63</div>
+
+      </div>
+
+    </article>
+    <article class="product-card" data-tag="lager">
+                    <div class="product-badge-ABV" data-abv="3.5">3.5%ABV</div>
+      <div class="product-image"><img src="images/products/Light_Lager.PNG" alt="Light Lager"></div>
+      <div class="product-info"><h3 class="product-title">LIGHT LAGER</h3><p class="product-desc">A light, crisp, and easy-drinking lager. Perfect for relaxing, BBQs, or beach days.</p>
+                            <div class="product-price">$4.63</div>
+      </div>
+    </article>
+
+    <article class="product-card" data-tag="edw-lime">
+                    <div class="product-badge-ABV" data-abv="4.9">4.9%ABV</div>
+      <div class="product-image"><img src="images/products/EdwLime.PNG" alt="Everyday Weekend Lime"></div>
+      <div class="product-info"><h3 class="product-title">Everyday Weekend Lime</h3><p class="product-desc">Tropical mango with zesty lime finish.</p>
+                            <div class="product-price">$2.19</div>
+      </div>
+    </article>
+    <article class="product-card" data-tag="edw-manggo">
+                    <div class="product-badge-ABV" data-abv="4.9">4.9%ABV</div>
+      <div class="product-image"><img src="images/products/EdwManggo.PNG" alt="Everyday Weekend Manggo"></div>
+      <div class="product-info"><h3 class="product-title">Everyday Weekend Manggo</h3><p class="product-desc">Tropical mango with zesty Manggo finish.</p>
+                            <div class="product-price">$2.19</div>
+      </div>
+    </article>
+    <article class="product-card" data-tag="summer-pale-ale">
+                    <div class="product-badge-ABV" data-abv="4.5">4.5%ABV</div>
+      <div class="product-image"><img src="images/products/SummerPaleAle.PNG" alt="Summer Pale Ale"></div>
+      <div class="product-info"><h3 class="product-title">Summer Pale Ale</h3><p class="product-desc">Balanced malt and hops with a smooth dry hop aroma. Light, bright, and perfectly crushable.</p>
+                            <div class="product-price">$2.88</div>
+      </div>
+    </article>
+    <article class="product-card" data-tag="small-hazy">
+                    <div class="product-badge-ABV" data-abv="4.8">4.8%ABV</div>
+      <div class="product-image"><img src="images/products/SmallHazy.PNG" alt="Small Hazy"></div>
+      <div class="product-info"><h3 class="product-title">Small Hazy</h3><p class="product-desc">A slightly hazy beer with fruity hops and smooth malt. Soft flavor, minimal bitterness.</p>
+                            <div class="product-price">$3.50</div>
+      </div>
+    </article>
+    <article class="product-card" data-tag="plisner">
+                    <div class="product-badge-ABV" data-abv="4.1">4.1%ABV</div>
+      <div class="product-image"><img src="images/products/Pilsner.PNG" alt="Plisner"></div>
+      <div class="product-info"><h3 class="product-title">Pilsner</h3><p class="product-desc">Dry, crisp, with light malt and balanced bitterness. Smooth and refreshing for any moment.</p>
+                            <div class="product-price">$2.25</div>
+      </div>
+    </article>
+    <article class="product-card" data-tag="kolsch">
+                    <div class="product-badge-ABV" data-abv="4.2">4.2%ABV</div>
+      <div class="product-image"><img src="images/products/Kolsch.PNG" alt="Kolsch"></div>
+      <div class="product-info"><h3 class="product-title">Kolsch | 4.2% ABV</h3><p class="product-desc">A German-style beer with mild sweetness and a refreshing finish. Easy to enjoy anytime.</p>
+                            <div class="product-price">$2.88</div>
+      </div>
+    </article>
+
+
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+
+    
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The IPA from CraftBeer Co. is hands down the best I've ever tasted. Perfect balance of hops and citrus notes. I'm a customer for life!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/avatar/avatar1.svg" alt="Portrait of satisfied customer Jhosep">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jhosep</h4>
+                            <span class="author-role">Founder</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The Mango Lime beer is absolutely refreshing! Perfect for summer evenings. The quality of CraftBeer Co's products is consistently impressive."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/avatar/avatar2.svg" alt="Portrait of happy customer Steven Wiliam">
+                        </div>
+                        <div class="author-info">
+                            <h4>Steven Wiliam</h4>
+                            <span class="author-role">Bartender</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a bar owner, I appreciate the consistent quality of CraftBeer Co's products. My customers love their unique flavors and the stories behind each brew."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="images/avatar/avatar3.svg" alt="Portrait of professional bar owner David Wiliam">
+                        </div>
+                        <div class="author-info">
+                            <h4>David Wiliam</h4>
+                            <span class="author-role">Bar Owner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us and order</h2>
+
+    <div class="contact-grid">
+      <!-- Left Side: Contact Info -->
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              PT. Rasa Pulau Indah<br>
+              Ruko Artha Gading Niaga<br>
+              Jalan. Boulevard Artha Gading, Blok. I, No. 06<br>
+              Kel. Kelapa Gading Barat, Kec. Kelapa Gading<br>
+              Jakarta Utara<br>
+              DKI Jakarta 14240
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">0818-0504-9000</div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">rasapulauindah@gmail.com</div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-text">
+              Monday–Friday: 9am–5pm<br>
+              Saturday: 9am–1pm<br>
+              Sunday: Closed
+            </div>
+          </div>
+        </div>
+
+        <!-- Responsive Google Map -->
+        <div class="map-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8166.164570931843!2d106.89189247634046!3d-6.151533834528472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f500264b1a37%3A0xd94d6eb1307f5e71!2sPT.%20Rasa%20Pulau%20Indah!5e0!3m2!1sen!2sid!4v1761039407226!5m2!1sen!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        </div> -->
+      </div>
+
+      <!-- Right Side: Contact Form -->
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form>
+          <div class="form-group">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" class="form-input" required>
+          </div>
+
+          <div class="form-group product-select-group">
+            <label for="subject" class="form-label">Choose Your Product</label>
+            <div class="product-multiselect">
+              <div class="selected-products" id="selectedProducts"></div>
+              <input 
+                type="text" 
+                id="subject" 
+                class="form-input product-search-input" 
+                placeholder="Search your products..." 
+                autocomplete="off"
+              >
+              <div class="product-search-results"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="recipientsname" class="form-label">Recipient's Name</label>
+            <input type="text" id="recipientsname" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Address</label>
+            <textarea id="message" class="form-input" placeholder="Your Address And your Note" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">Rasa<span>Pulau</span>Indah</div>
+                    <p class="footer-desc">Brewing excellence since 2019. We craft premium beers with passion, tradition, and innovation.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Our Beers</a></li>
+                        <li><a href="#process">Brewing Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-heading">Our Beers</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" data-target="ipa">IPA</a></li>
+                        <li><a href="#" data-target="lager">Light Lager</a></li>
+                        <li><a href="#" data-target="edw-manggo">EDW Mango</a></li>
+                        <li><a href="#" data-target="edw-lime">EDW Lime</a></li>
+                        <li><a href="#" data-target="summer-pale-ale">Summer Pale Ale</a></li>
+                        <li><a href="#" data-target="small-hazy">Small Hazy Pilsner</a></li>
+                        <li><a href="#" data-target="Kolsch">Klosch</a></li>
+                        <li><a href="#" data-target="Plisner">Plisner</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4 class="footer-heading">Branding</h4>
+                    <p>Black Sand Canggu <br> Island Breawing <br> Hard Seltzer</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BanhCode. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #e67e22;"></i> for beer Rasa Pulau Indah</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
