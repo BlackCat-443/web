@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const phoneNumber = "6281234567890"; // ganti nomor kamu
+      const phoneNumber = "6281319574154"; // ganti nomor kamu
       const productLines = Array.from(selectedItems.entries())
         .map(([product, qty]) => `- ${product}: ${qty} pcs`)
         .join("\n") || "Tidak ada produk dipilih";

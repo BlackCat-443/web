@@ -73,3 +73,47 @@ document.querySelectorAll('.product-badge-ABV').forEach(badge => {
     badge.classList.add('abv-high');
   }
 });
+
+
+
+
+// testimonial js
+const track = document.querySelector(".testimonial-track");
+const cards = document.querySelectorAll(".testimonial-card");
+const dotsContainer = document.querySelector(".dots");
+
+let index = 0;
+const total = cards.length;
+
+/* Create dots */
+cards.forEach((_, i) => {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => moveTo(i));
+    dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll(".dot");
+
+/* Update UI */
+function updateSlider() {
+    track.style.transform = `translateX(-${index * (cards[0].offsetWidth + 20)}px)`;
+
+    cards.forEach((c, i) => c.classList.toggle("active", i === index));
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+}
+
+/* Move to index */
+function moveTo(i) {
+    index = i;
+    updateSlider();
+}
+
+/* Autoplay */
+function autoPlay() {
+    index = (index + 1) % total;
+    updateSlider();
+}
+
+setInterval(autoPlay, 3000);  // 3 seconds autoplay
