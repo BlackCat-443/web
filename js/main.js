@@ -161,6 +161,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+ // Fungsi untuk mendapatkan nomor telepon (dengan enkripsi sederhana) 6281319574154
+  function getPhoneNumber() {
+    // Enkripsi: base64 dari string yang dibalik
+    const encoded = "NDUxNDc1OTEzMTgyNg==";
+    return atob(encoded).split('').reverse().join('');
+  }
+
   // Kirim ke WhatsApp
   const contactForm = document.querySelector(".contact-form form");
   if (contactForm) {
@@ -182,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const phoneNumber = "6281319574154"; // ganti nomor kamu
+      const phoneNumber = getPhoneNumber(); // Ambil nomor telepon dari fungsi
       const productLines = Array.from(selectedItems.entries())
         .map(([product, qty]) => `- ${product}: ${qty} pcs`)
         .join("\n") || "Tidak ada produk dipilih";

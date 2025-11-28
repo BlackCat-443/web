@@ -63,73 +63,94 @@
 
 
 
-/*testimonial */
+/* =============== TESTIMONIAL (No 3D) =============== */
 .testimonial-carousel {
     width: 100%;
     position: relative;
     overflow: hidden;
-    margin-top: 30px;
+    padding: 40px 0;
 }
 
 .testimonial-track {
     display: flex;
+    gap: 30px;
+    align-items: center;
     transition: transform 0.7s ease-in-out;
 }
 
 .testimonial-card {
-    min-width: 320px;
-    padding: 22px;
+    width: 360px;
+    min-height: 210px;
+    padding: 25px;
     background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    transform: scale(0.85) rotateY(15deg);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
     opacity: 0.5;
-    transition: 0.6s ease;
+    transform: scale(0.9);
+    transition: 0.5s ease;
 }
 
+/* Active centered card */
 .testimonial-card.active {
-    transform: scale(1) rotateY(0deg);
     opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.15);
 }
 
+/* Text */
+.testimonial-text {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    user-select: none;
+}
+
+/* Author */
 .testimonial-author {
     display: flex;
-    margin-top: 15px;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 18px;
 }
 
 .author-image img {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    object-fit: cover;     /* foto tidak akan kepotong */
 }
 
 /* DOTS */
 .dots {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    gap: 8px;
+    margin-top: 25px;
+    gap: 10px;
 }
 
 .dot {
     width: 10px;
     height: 10px;
+    background: rgba(0,0,0,0.25);
     border-radius: 20px;
-    background: rgba(0,0,0,0.3);
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .dot.active {
-    width: 26px;
-    background: #111;
+    width: 28px;
+    background: #000;
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .testimonial-card {
-        min-width: 260px;
+        width: 300px;
     }
 }
 
+@media (max-width: 520px) {
+    .testimonial-card {
+        width: 250px;
+        padding: 20px;
+    }
+}

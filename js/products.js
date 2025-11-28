@@ -77,7 +77,7 @@ document.querySelectorAll('.product-badge-ABV').forEach(badge => {
 
 
 
-// testimonial js
+// ===== Clean Testimonial Slider (No 3D) =====
 const track = document.querySelector(".testimonial-track");
 const cards = document.querySelectorAll(".testimonial-card");
 const dotsContainer = document.querySelector(".dots");
@@ -85,7 +85,7 @@ const dotsContainer = document.querySelector(".dots");
 let index = 0;
 const total = cards.length;
 
-/* Create dots */
+// create dots
 cards.forEach((_, i) => {
     const dot = document.createElement("div");
     dot.classList.add("dot");
@@ -93,27 +93,33 @@ cards.forEach((_, i) => {
     dot.addEventListener("click", () => moveTo(i));
     dotsContainer.appendChild(dot);
 });
-
 const dots = document.querySelectorAll(".dot");
 
-/* Update UI */
 function updateSlider() {
-    track.style.transform = `translateX(-${index * (cards[0].offsetWidth + 20)}px)`;
+    const cardWidth = cards[0].offsetWidth + 30; // include gap
+    const containerWidth = document.querySelector(".testimonial-carousel").offsetWidth;
+
+    const offset = (index * cardWidth) - (containerWidth / 2 - cardWidth / 2);
+
+    track.style.transform = `translateX(-${offset}px)`;
 
     cards.forEach((c, i) => c.classList.toggle("active", i === index));
     dots.forEach((d, i) => d.classList.toggle("active", i === index));
 }
 
-/* Move to index */
 function moveTo(i) {
     index = i;
     updateSlider();
 }
 
-/* Autoplay */
+// autoplay
 function autoPlay() {
     index = (index + 1) % total;
     updateSlider();
 }
 
-setInterval(autoPlay, 3000);  // 3 seconds autoplay
+setInterval(autoPlay, 3500);
+
+updateSlider();
+
+
